@@ -1,3 +1,19 @@
 body {
-    background-color: rebeccapurple;
-  }
+  /* Maximum height of what is visible */
+  height: 100vh;   
+  margin: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#notes {
+  flex-grow: 0.5;
+  border-style: solid;
+}
+
+#timetable {
+  flex-grow: 1;
+  border-style: solid;
+}
