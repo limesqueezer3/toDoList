@@ -1,4 +1,4 @@
-export function timestamp (begin, end, item) {
+export function createTimestamp (begin, end, item) {
     let hasItem = item ? true : false;
     function setItem (item) {
         hasItem = true;
