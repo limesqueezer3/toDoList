@@ -11,8 +11,13 @@ body {
 #notes {
   flex-grow: 0.5;
   border-style: solid;
+  display: grid;
+  grid-template-rows: repeat(30, 100px)
 }
 
+#notes > div, #notes > form {
+  padding: 7px;
+}
 #timetable {
   flex-grow: 1;
   border-style: solid;
