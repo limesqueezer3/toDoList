@@ -41,3 +41,5 @@ function deleteItem(item) {
         localStorage.setItem(ITEM_LIST_KEY, JSON.stringify(itemList));
     }
 }
+
+
