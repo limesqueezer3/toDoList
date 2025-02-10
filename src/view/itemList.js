@@ -1,5 +1,5 @@
-import { addItem, addTimeStamp, getItems, getTimeStamps } from "../logic.js";
-export {renderItems, renderForm, handleAddItem};
+import { addItem, addTimeStamp, getItems, getTimeStamps, deleteItem } from "../logic.js";
+export {renderItems, renderForm, handleAddItem };
 
 
 function renderItems() {
@@ -16,8 +16,17 @@ function renderItems() {
                 parameter.textContent = property;
                 itemDiv.appendChild(parameter);
             });
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", () => {
+                deleteItem(item); // Call the delete function
+                resetView(); // Clear the view
+            });
+
+            itemDiv.appendChild(deleteButton); // Add the button to 
             notesDiv.appendChild(itemDiv);
         });
+        
     }
 }
 
@@ -84,10 +93,11 @@ function renderForm() {
 function resetView() {
     const notesDiv = document.querySelector("#notes");
     notesDiv.innerHTML = "";
+    renderItems(); 
+    renderForm();
 }
 function handleAddItem(topic, priority, deadline, hours) {
     addItem(topic, priority, deadline, hours);
     resetView();
-    renderItems(); 
-    renderForm();
 }
+
