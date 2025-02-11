@@ -1,4 +1,4 @@
-export {renderTime}
+export {renderTime, renderDays}
 
 function renderTime() {
     const timeLeftDiv = document.querySelector("#timeLeft");
@@ -30,3 +30,13 @@ function renderTime() {
         timeRightDiv.appendChild(timeRightSlot);
     }
 }
+
+function renderDays() {
+    const timeStampTableDiv = document.querySelector("#timeStampTable");
+    for (let i = 0; i < 7 ; i++) {
+        const day = document.createElement("div");
+        day.className = "day";
+        timeStampTableDiv.appendChild(day);
+    }
+}
+

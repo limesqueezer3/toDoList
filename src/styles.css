@@ -55,3 +55,21 @@ body {
   height: 100%; /* Ensure the container takes up the full height */
 }
 
+#timeStampTable {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.timeStamp {
+
+}
+
+.day {
+  flex-grow: 1; /* Ensure each day takes equal width */
+  text-align: center; /* Center the text horizontally */
+  border-left: 1px solid black; /* Thin border on the left */
+  border-right: 1px solid black; /* Thin border on the right */
+  padding-left: 5px; /* Left padding */
+  padding-right: 5px; /* Right padding */
+}
