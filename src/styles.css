@@ -5,15 +5,71 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+}
+
+#notes, #timeView {
+  overflow: auto; /* Adds scrollbars if content overflows */
+}
+
+
+#notes {
+  flex-grow: 0.1;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+}
+
+#notes > div, #notes > form {
+  padding: 7px;
+}
+#timeView {
+  flex-grow: 3;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+}
+
+#timeAndTimeStampTable {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
   justify-content: space-between;
 }
 
-#notes {
-  flex-grow: 0.5;
-  border-style: solid;
+
+#timeLeft {
+  padding-left: 4px;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure the container takes up the full height */
 }
 
-#timetable {
+#timeRight {
+  padding-left: 4px;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure the container takes up the full height */
+}
+
+#timeStampTable {
+  display: flex;
+  flex-direction: row;
   flex-grow: 1;
-  border-style: solid;
+}
+
+.timeStamp {
+
+}
+
+.day {
+  flex-grow: 1; /* Ensure each day takes equal width */
+  text-align: center; /* Center the text horizontally */
+  border-left: 1px solid black; /* Thin border on the left */
+  border-right: 1px solid black; /* Thin border on the right */
+  padding-left: 5px; /* Left padding */
+  padding-right: 5px; /* Right padding */
 }
